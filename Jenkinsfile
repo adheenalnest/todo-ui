@@ -34,7 +34,7 @@ pipeline {
                     bat "docker rm todo-angular-ui 2>nul || ver >nul"
 
                     // Stop any other container already occupying port 4300
-                    bat "for /f \"tokens=*\" %%i in ('docker ps -q --filter publish=4300') do docker stop %%i && docker rm %%i"
+                    powershell(returnStatus: true, script: 'docker ps -q --filter "publish=4300" | ForEach-Object { docker stop $_; docker rm $_ }')
 
                     // Launch new container using Windows Batch line continuation
                     bat """
