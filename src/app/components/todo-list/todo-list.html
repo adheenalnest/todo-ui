@@ -1,0 +1,86 @@
+<div class="page">
+  <header>
+    <div class="header-left">
+      <h1>My Todos</h1>
+      <div class="subtitle">{{ totalCount }} task{{ totalCount !== 1 ? 's' : '' }} total</div>
+    </div>
+    <button class="btn-logout" (click)="logout()">Logout</button>
+  </header>
+
+  <div class="add-form">
+    <input [(ngModel)]="newTitle" placeholder="What needs to be done?" class="input" />
+    <div class="input-divider"></div>
+    <input [(ngModel)]="newDescription" placeholder="Add a note (optional)" class="input" />
+    <button (click)="add()" class="btn-add">+ Add</button>
+  </div>
+
+  @if (error) {
+    <p class="error">{{ error }}</p>
+  }
+
+  @if (loading) {
+    <div class="loading">
+      <span class="spinner"></span>
+      <span>Loading...</span>
+    </div>
+  } @else {
+    @if (todos.length > 0) {
+      <div class="progress-bar-wrap">
+        <div class="progress-bar-track">
+          <div class="progress-bar-fill" [style.width.%]="progressPercent"></div>
+        </div>
+        <span class="progress-label">{{ completedCount }} / {{ todos.length }} done</span>
+      </div>
+    }
+
+    <ul class="todo-list">
+      @for (todo of todos; track todo.id) {
+        <li class="todo-item" [class.completed]="todo.isCompleted">
+          @if (editingId === todo.id) {
+            <div class="edit-form">
+              <input [(ngModel)]="editTitle" class="input" placeholder="Title" />
+              <input [(ngModel)]="editDescription" class="input" placeholder="Description" />
+              <div class="edit-actions">
+                <button (click)="saveEdit(todo)" class="btn-save">Save</button>
+                <button (click)="cancelEdit()" class="btn-cancel">Cancel</button>
+              </div>
+            </div>
+          } @else {
+            <div class="todo-content">
+              <input type="checkbox" [checked]="todo.isCompleted" (change)="toggle(todo)" />
+              <div class="todo-text">
+                <span class="title">{{ todo.title }}</span>
+                @if (todo.description) {
+                  <span class="desc">{{ todo.description }}</span>
+                }
+              </div>
+            </div>
+            <div class="todo-actions">
+              @if (todo.isCompleted) {
+                <span class="badge-done">Done</span>
+              }
+              <button (click)="startEdit(todo)" class="btn-edit">Edit</button>
+              <button (click)="delete(todo.id)" class="btn-delete">Delete</button>
+            </div>
+          }
+        </li>
+      } @empty {
+        <div class="empty">
+          <div class="empty-icon">📋</div>
+          <p>No todos yet. Add one above!</p>
+        </div>
+      }
+    </ul>
+  }
+
+  @if (totalPages > 1) {
+    <div class="pagination">
+      <button class="page-btn" (click)="goToPage(page - 1)" [disabled]="page === 1">&#8249;</button>
+      @for (p of pageNumbers; track p) {
+        <button class="page-btn" [class.active]="p === page" (click)="goToPage(p)">{{ p }}</button>
+      }
+      <button class="page-btn" (click)="goToPage(page + 1)" [disabled]="page === totalPages">&#8250;</button>
+    </div>
+    <p class="page-info">Page {{ page }} of {{ totalPages }} &mdash; {{ totalCount }} total</p>
+  }
+</div>

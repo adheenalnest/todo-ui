@@ -1,0 +1,70 @@
+﻿Date	Time	Severity	PID	TID	Function	Message
+09-06-2026	15:53:50.104	 INFO	 37780	 48644	DllMain	"DLL_PROCESS_ATTACH Thu Jan  2 23:38:14 2025 11.3.2440.11"
+09-06-2026	15:53:50.108	 INFO	 37780	 48644	DllMain	"PROCESS ATTACHED"
+09-06-2026	15:53:50.109	 INFO	 37780	 51556	LateInitialization	"Intialization..."
+09-06-2026	15:53:50.111	 INFO	 37780	 51556	LoadDisplayDevicesName	"DisplayDevices : "
+09-06-2026	15:53:50.113	 INFO	 37780	 51556	LoadDisplayDevicesName	"\\.\DISPLAY1"
+09-06-2026	15:53:50.114	 INFO	 37780	 51556	LoadDisplayDevicesName	"\\.\DISPLAY2"
+09-06-2026	15:53:50.116	 INFO	 37780	 51556	LoadDisplayDevicesName	"\\.\DISPLAY3"
+09-06-2026	15:53:50.117	 INFO	 37780	 51556	LoadDisplayDevicesName	"\\.\DISPLAY4"
+09-06-2026	15:53:50.122	ERROR	 37780	 51556	LateInitialization	"std::exception caught = GetFileVersionInfoSizeW failed with 1813
+"
+09-06-2026	15:53:50.124	 INFO	 37780	 51556	LateInitialization	"Exe = C:\Program Files\Git\usr\bin\head.exe
+ProductName = 
+FileDescription = 
+ShadowFolder = %LOCALAPPDATA%\EndpointDLP\print-shadow
+ParsingMode = Hybrid
+DeletePrinterShadowFiles = 1
+PrinterUseDisplayDevicesList = 0
+EnablePrinterEscapeProcessing = 1
+EnableWatermarkForAll = 0
+MaxPrintPages = 4294967295
+GdiPlusToken = 14446687
+ExcludedEscapes = 4117, 37, 4118, 4115, 4121, "
+09-06-2026	15:53:50.126	 INFO	 37780	 51556	LateInitialization	"Intialization finished"
+09-06-2026	15:53:51.195	 INFO	 40940	 50716	DllMain	"DLL_PROCESS_ATTACH Thu Jan  2 23:38:14 2025 11.3.2440.11"
+09-06-2026	15:53:51.199	 INFO	 40940	 50716	DllMain	"PROCESS ATTACHED"
+09-06-2026	15:53:51.201	 INFO	 40940	 37760	LateInitialization	"Intialization..."
+09-06-2026	15:53:51.203	 INFO	 40940	 37760	LoadDisplayDevicesName	"DisplayDevices : "
+09-06-2026	15:53:51.204	 INFO	 40940	 37760	LoadDisplayDevicesName	"\\.\DISPLAY1"
+09-06-2026	15:53:51.206	 INFO	 40940	 37760	LoadDisplayDevicesName	"\\.\DISPLAY2"
+09-06-2026	15:53:51.208	 INFO	 40940	 37760	LoadDisplayDevicesName	"\\.\DISPLAY3"
+09-06-2026	15:53:51.210	 INFO	 40940	 37760	LoadDisplayDevicesName	"\\.\DISPLAY4"
+09-06-2026	15:53:51.216	ERROR	 40940	 37760	LateInitialization	"std::exception caught = GetFileVersionInfoSizeW failed with 1813
+"
+09-06-2026	15:53:51.217	 INFO	 40940	 37760	LateInitialization	"Exe = C:\Program Files\Git\usr\bin\bash.exe
+ProductName = 
+FileDescription = 
+ShadowFolder = %LOCALAPPDATA%\EndpointDLP\print-shadow
+ParsingMode = Hybrid
+DeletePrinterShadowFiles = 1
+PrinterUseDisplayDevicesList = 0
+EnablePrinterEscapeProcessing = 1
+EnableWatermarkForAll = 0
+MaxPrintPages = 4294967295
+GdiPlusToken = 14447781
+ExcludedEscapes = 4117, 37, 4118, 4115, 4121, "
+09-06-2026	15:53:51.219	 INFO	 40940	 37760	LateInitialization	"Intialization finished"
+09-06-2026	15:54:05.415	 INFO	 46772	 45164	DllMain	"DLL_PROCESS_ATTACH Thu Jan  2 23:38:14 2025 11.3.2440.11"
+09-06-2026	15:54:05.420	 INFO	 46772	 45164	DllMain	"PROCESS ATTACHED"
+09-06-2026	15:54:05.423	 INFO	 46772	 42160	LateInitialization	"Intialization..."
+09-06-2026	15:54:05.424	 INFO	 46772	 42160	LoadDisplayDevicesName	"DisplayDevices : "
+09-06-2026	15:54:05.426	 INFO	 46772	 42160	LoadDisplayDevicesName	"\\.\DISPLAY1"
+09-06-2026	15:54:05.428	 INFO	 46772	 42160	LoadDisplayDevicesName	"\\.\DISPLAY2"
+09-06-2026	15:54:05.431	 INFO	 46772	 42160	LoadDisplayDevicesName	"\\.\DISPLAY3"
+09-06-2026	15:54:05.432	 INFO	 46772	 42160	LoadDisplayDevicesName	"\\.\DISPLAY4"
+09-06-2026	15:54:05.438	ERROR	 46772	 42160	LateInitialization	"std::exception caught = GetFileVersionInfoSizeW failed with 1813
+"
+09-06-2026	15:54:05.441	 INFO	 46772	 42160	LateInitialization	"Exe = C:\Program Files\Git\usr\bin\bash.exe
+ProductName = 
+FileDescription = 
+ShadowFolder = %LOCALAPPDATA%\EndpointDLP\print-shadow
+ParsingMode = Hybrid
+DeletePrinterShadowFiles = 1
+PrinterUseDisplayDevicesList = 0
+EnablePrinterEscapeProcessing = 1
+EnableWatermarkForAll = 0
+MaxPrintPages = 4294967295
+GdiPlusToken = 14462000
+ExcludedEscapes = 4117, 37, 4118, 4115, 4121, "
+09-06-2026	15:54:05.443	 INFO	 46772	 42160	LateInitialization	"Intialization finished"
