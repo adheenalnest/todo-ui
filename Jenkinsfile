@@ -27,9 +27,14 @@ pipeline {
                     // Ensure Docker network exists
                     bat "docker network create ${NETWORK_NAME} 2>nul || ver >nul"
 
-                    // Stop and remove existing container if running
+                    // Stop and remove existing container if running (current and old name)
                     bat "docker stop ${CONTAINER_NAME} 2>nul || ver >nul"
                     bat "docker rm ${CONTAINER_NAME} 2>nul || ver >nul"
+                    bat "docker stop todo-angular-ui 2>nul || ver >nul"
+                    bat "docker rm todo-angular-ui 2>nul || ver >nul"
+
+                    // Stop any other container already occupying port 4300
+                    bat "for /f \"tokens=*\" %%i in ('docker ps -q --filter publish=4300') do docker stop %%i && docker rm %%i"
 
                     // Launch new container using Windows Batch line continuation
                     bat """
